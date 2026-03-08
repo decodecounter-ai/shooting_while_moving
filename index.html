@@ -213,10 +213,10 @@ function render(){
   const gC = {x:PAD+GOAL.x,  y:PAD+GOAL.y};
 
   const {turret, vg} = computeVirtualGoal(robot, GOAL, velVec);
-  const vgEnd = clampRay(rC.x, rC.y, turret.x, turret.y, 500);
+  const vgEnd = clampRay(rC.x, rC.y, turret.x, turret.y, 4000);
 
   const worldDir  = vnorm(vadd(vsc(turret, PROJ_SPEED), velVec));
-  const resultEnd = clampRay(rC.x, rC.y, worldDir.x, worldDir.y, 500);
+  const resultEnd = clampRay(rC.x, rC.y, worldDir.x, worldDir.y, 4000);
 
   const vtR = velTipPos();
   const vtC = {x:PAD+vtR.x, y:PAD+vtR.y};
